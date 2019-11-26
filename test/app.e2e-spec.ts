@@ -21,7 +21,7 @@ describe('AppController (e2e)', () => {
   });
   it('/ (GET => 400 (wrong query string))', () => {
     return request(app.getHttpServer())
-      .get('/?name=qwer&token=asd')
+      .get('/?name=&token=')
       .expect(400);
   });
   it('/ (GET => 201 (query string is ok))', () => {
